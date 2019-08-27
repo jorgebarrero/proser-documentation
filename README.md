@@ -10,6 +10,7 @@ We will make the offcial
 - Instalation documentation
 - User documentation
 - Requirements documentation
+- Work plan
 
 Documents can be in Spanish as separate files whith the same name and a postfix
 -es Example:
@@ -47,3 +48,7 @@ All infromation related on how to use the aplication will be here
 ## Requirements documentation
 
 All features documentation will be saved here just for reference
+
+## Work plan
+
+Individual files for planning activities
