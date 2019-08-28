@@ -1,12 +1,24 @@
 # Proser workplan
 
+## Tuesday, Agust 27th 2019
+- Fix: agentsAssignation report
+- Fix: agentsAuxiliar report
+- Fix: agentsConnectionReport
+- Fix: callsAbandoned report
+- Fix: callsDetail report
+- Fix: inboudDailyByInterval report
+- Fix: mainAudti report
+- Fix: mainAudit report
+- Fix: mainCallEntry report
+- Fix: callsInboundDaily report
+
 ## Monday, Agust 25th 2019
 - Fix: userSelectionMenus filter status
 
 ## Sunday, Agust 25th 2019
 - Fix: userSelectionMenus changes to Inv
 
-## Thursday, Agust 20th 2019
+## Tuesday, Agust 20th 2019
 - Fix: userSelectionMenus (selector)
 
 ## Wednesday, Agust 20th 2019
