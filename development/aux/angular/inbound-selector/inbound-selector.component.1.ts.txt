@@ -1,0 +1,132 @@
+import { Component, OnInit, Input, Output, EventEmitter, OnDestroy} from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+
+
+import { AuthService } from 'src/app/shared/services/pages/auth.service';
+import { AlertService } from 'src/app/shared/services/alert.service';
+
+
+import { Router } from '@angular/router';
+import { AlertModel } from 'src/app/shared/models/Alert';
+import { MenuOptions } from 'src/app/shared/models/filter/MenuOptions';
+import { UserSelection } from 'src/app/shared/models/filter/Selection';
+
+@Component({
+  selector: 'app-inbound-selector',
+  templateUrl: './inbound-selector.component.html',
+  styleUrls: ['./inbound-selector.component.scss']
+})
+export class InboundSelectorComponent implements OnInit, OnDestroy {
+
+  @Output() selectedOptions: EventEmitter =  new EventEmitter;
+
+// @Input() menuOptions: MenuOptions;
+// @Input() userSelection: MenuOptions;
+
+  constructor(
+    private formBuilder: FormBuilder,
+    private authService: AuthService,
+    private alertService: AlertService,
+    private modalService: NgbModal,
+    private router: Router,
+
+  ) { }
+
+  selectorForm: FormGroup;
+  submitted = false;
+  alertMessage = new AlertModel;
+
+  // user: UserInterface = {
+  //   username: '',
+  //   password: '',
+  //   firstname: '',
+  //   lastname: '',
+  //   profile: '',
+  // };
+
+  ngOnInit() {
+
+    // console.log('alertMessage', this.alertMessage);
+
+    this.menuOptions = new MenuOptions;
+    console.log('menuOptions', this.menuOptions);
+    this.userSelection = new MenuOptions;
+
+    this.userSelection.client = [
+      {id: 8, name: 'CANTV'}
+    ];
+
+    this.selectorForm = this.formBuilder.group({
+
+      title: [this.userSelection.title, Validators.required],
+      subtitle: [this.userSelection.subtitle, Validators.required],
+      filter: [this.userSelection.filter, Validators.required],
+      filter_hca_agent: [this.userSelection.filter_hca_agent, Validators.required],
+      filter_hca_queue: [this.userSelection.filter_hca_queue, Validators.required],
+      filter_inv_agent: [this.userSelection.filter_inv_agent, Validators.required],
+      filter_inv_queue: [this.userSelection.filter_inv_queue, Validators.required],
+      status: [this.userSelection.status, Validators.required],
+
+      reportlines: [this.userSelection.reportlines, Validators.required],
+      scale: [this.userSelection.scale, Validators.required],
+      login: [this.userSelection.login, Validators.required],
+
+      today: [this.userSelection.today, Validators.required],
+      start_date: [this.userSelection.start_date, Validators.required],
+      end_date: [this.userSelection.end_date, Validators.required],
+      start_time: [this.userSelection.start_time, Validators.required],
+      end_time: [this.userSelection.end_time, Validators.required],
+      interval: [this.userSelection.interval, Validators.required],
+      last_minutes: [this.userSelection.last_minutes, Validators.required],
+
+
+      client: [this.userSelection.client, Validators.required],
+      queue: [this.userSelection.queue, Validators.required],
+      service: [this.userSelection.service, Validators.required],
+      campaign: [this.userSelection.campaign, Validators.required],
+      supervisor: [this.userSelection.supervisor, Validators.required],
+      agent: [this.userSelection.agent, Validators.required],
+      schedule: [this.userSelection.schedule, Validators.required],
+      substitute: [this.userSelection.substitute, Validators.required],
+
+      auxiliar: [this.userSelection.auxiliar, Validators.required],
+      asignation: [this.userSelection.asignation, Validators.required],
+
+      group_by: [this.userSelection.group_by, Validators.required],
+      group_by_field: [this.userSelection.group_by_field, Validators.required],
+      order_by: [this.userSelection.order_by, Validators.required],
+      limit_by: [this.userSelection.limit_by, Validators.required],
+
+      total: [this.userSelection.total, Validators.required],
+      name: [this.userSelection.name, Validators.required],
+      report_id: [this.userSelection.report_id, Validators.required],
+
+    });
+  }
+
+  ngOnDestroy() {
+    this.selectedOptions.emit(this.selectorForm.value);
+  }
+
+  // firstname: ['', Validators.required],
+  // lastname: ['', Validators.required],
+  // username: ['', [Validators.required, Validators.minLength(6)]],
+  // email: ['', [Validators.required, Validators.email]],
+  // password: ['', [Validators.required, Validators.minLength(6)]],
+  // confirmPassword: ['', Validators.required],
+
+  // convenience getter for easy access to form fields
+  get f() { return this.selectorForm.controls; }
+
+  onResetForm() {
+    this.alertMessage = new AlertModel;
+    this.submitted = false;
+    this.selectorForm.reset();
+  }
+
+  onChange() {
+    console.log('selectorForm', this.selectorForm.value);
+  }
+}

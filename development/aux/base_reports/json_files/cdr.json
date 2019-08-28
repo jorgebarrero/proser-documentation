@@ -1,0 +1,8 @@
+{
+  "filter_field": ["disposition"],
+  "fields": ["uniqueid", "recordingfile"],
+  "tables": ["MainCdr"],
+  "filterBy": ["id > 1"],
+  "groupBy": ["disposition"],
+  "limitBy": ["5000"]
+}
