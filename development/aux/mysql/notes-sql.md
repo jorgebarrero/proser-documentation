@@ -54,6 +54,15 @@ FLUSH TABLES;
 FLUSH HOSTS;
 FLUSH LOGS;
 
+ou should put it into command line in windows.
+
+mysqladmin -u [username] -p flush-hosts
+**** [MySQL password]
+or
+
+mysqladmin flush-hosts -u [username] -p
+**** [MySQL password]
+
 
 # show users
 select * from mysql.user;

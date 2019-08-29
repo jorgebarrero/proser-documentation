@@ -1,5 +1,6 @@
-pm2 start --name SERVER npm -- run server -i max
-pm2 start npm  --name UPDATE -- run update -i max
+pm2 start --name SERVER npm -- run server -i max;
+pm2 start npm  --name UPDATE -- run update -i max;
+pm2 save;
 
 
 babel-node src/sync/updates/hca/update_hca_agent.js
