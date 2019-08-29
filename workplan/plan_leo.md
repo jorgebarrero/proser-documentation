@@ -1,5 +1,11 @@
 # Proser workplan
 
+## Wednesday, Agust 28th 2019
+- Fix: operationDetail report frontend
+- Fix: callsDetail report frontend
+- Fix: callsAbandoned report frontend
+-Fix: operationDetail report backend
+
 ## Tuesday, Agust 27th 2019
 - Fix: agentsAssignation report
 - Fix: agentsAuxiliar report
