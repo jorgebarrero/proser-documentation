@@ -1,0 +1,18 @@
+SELECT
+${groupBy}
+${fields}
+
+FROM
+${tables}
+
+WHERE
+${filterBy}
+
+GROUP BY
+${groupBy}
+
+ORDER BY
+${orderBy}
+
+LIMIT
+${limitBy}
