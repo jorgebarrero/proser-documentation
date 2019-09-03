@@ -1,5 +1,0 @@
-agentType
-agentSupervisor
-agentSchedule
-agentRole
-agentAssignation
