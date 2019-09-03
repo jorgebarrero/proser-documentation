@@ -1,0 +1,17 @@
+pm2 start --name SERVER npm -- run server -i max;
+pm2 start --name SYSTEM npm -- run start-system -i max;
+pm2 start --name UPDATE npm -- run load-day-prod -i max;
+pm2 save;
+
+sudo firewall-cmd --zone=public --add-port=3151/tcp --permanent;
+sudo firewall-cmd --zone=public --add-port=3152/tcp --permanent;
+sudo firewall-cmd --reload
+
+
+
+babel-node src/sync/updates/hca/update_hca_agent.js
+babel-node src/sync/updates/hca/update_hca_agent.js
+
+
+pm2 start babel-node src/server/server.js,
+pm2 start babel-node src/sync/updates/main_update.js,
