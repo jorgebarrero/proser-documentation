@@ -15,7 +15,7 @@ Las bases de datos se encuentran organizadas en dos grupos:
 
 - proser_base (este nombre es configurable)
 
-Extraemos los datos com
+Extraemos los datos con
 
 ```
 SHOW TABLES
