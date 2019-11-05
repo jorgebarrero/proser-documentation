@@ -1,5 +1,0 @@
-column_name
-user_selection_id
-user_username
-user_selection_name
-user_selection_content

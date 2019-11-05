@@ -1,6 +1,0 @@
-column_name
-aux_color_id
-aux_color_name
-aux_color_string
-aux_color_use
-aux_color_status

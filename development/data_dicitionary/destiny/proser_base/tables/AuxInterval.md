@@ -1,6 +1,0 @@
-column_name
-aux_interval_id
-aux_interval_name
-aux_interval_minutes
-aux_interval_value
-aux_interval_status

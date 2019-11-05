@@ -1,0 +1,8 @@
+SERVER > Unhandled error for request POST /InvDisplays/displayInboundIndicators?access_token=ijISWgcb1LoCo31DZu0DgLoNTpC  │
+at _callee13$ (/var/www/html/proser_reports/src/common/queries/InvDisplay/displayInbound/displayInboundIndi  │
+at tryCatch (/var/www/html/proser_reports/node_modules/regenerator-runtime/runtime.js:45:40)                 │
+at Generator.invoke [as _invoke] (/var/www/html/proser_reports/node_modules/regenerator-runtime/runtime.js:  │
+at Generator.prototype.(anonymous function) [as throw] (/var/www/html/proser_reports/node_modules/regenerat  │
+at asyncGeneratorStep (/var/www/html/proser_reports/node_modules/@babel/runtime/helpers/asyncToGenerator.js  │
+at _throw (/var/www/html/proser_reports/node_modules/@babel/runtime/helpers/asyncToGenerator.js:29:9)        │
+ at process._tickCallback (internal/process/next_tick.js:68:7)   

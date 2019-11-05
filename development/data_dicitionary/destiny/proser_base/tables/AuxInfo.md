@@ -1,5 +1,0 @@
-column_name
-aux_hour_id
-aux_hour_name
-aux_hour_value
-aux_hour_status
